@@ -91,6 +91,53 @@ for(int a=0;a<total.length;a++){
                 {null, null},
                 {null, null},
                 {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
                 {null, null}
             },
             new String [] {
@@ -122,7 +169,7 @@ for(int a=0;a<total.length;a++){
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(635, Short.MAX_VALUE))
+                .addContainerGap(620, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,11 +180,9 @@ for(int a=0;a<total.length;a++){
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    public String[] strConector(){
-        String[] c = {"un","para","Para","todo","Todo","En","en","que","Que","con","Con","Y","y","su","Su","sus","Sus",
-                        "a","A","de","De","del","Del","La","la","Las","las","al","Al","Lo","lo","Los","los","el","El","Un",
-                        "Ya","ya","se","Se","Por","por","una","Una","Así","así","o","O","e","E","u","como","Como","sino",
+   
+   /* public String[] strConector(){
+        String[] c = {"todo","Todo","Como","sino",
                         "Sino","sin","Sin","tan","Tan","ha","Ha","vez","Vez","ante","Ante","antes","Antes","Después","después",
                         "cual","luego","Luego","Otra","otra","Otras","otras","Otro","otro","Otros","otros","último","sobre",
                         "Sobre","Además","además","decir","ejemplo","dado","Dado","debido","Debido","causa","pues","Pues",
@@ -148,7 +193,12 @@ for(int a=0;a<total.length;a++){
                         "desde","Desde","cuando","Cuando","después","conclusión","efecto","esto","estos","Esto","esta","estas",
                         "Esta","este","Este","solo","Consecuencia","consecuencia","aún","Aún","menos","Muy","muy"};;
         return c;
+    }*/
+      public String[] strConector(){
+        String[] c = {","};;
+        return c;
     }
+                
     
     public void leerArchivo() throws FileNotFoundException, IOException{
         FileReader file = new FileReader(archivo);
@@ -206,7 +256,7 @@ for(int a=0;a<total.length;a++){
         for(int i=0; i<total.length; i++){
             total[i]=1;
         }
-        System.out.println("                 ");
+        System.out.println("        ");
         for(int i=0; i<aux.length; i++){
             if(aux[i].length()!=0){
                 palabras[contador] = aux[i];
@@ -278,7 +328,11 @@ for(int a=0;a<total.length;a++){
                 tt -= 7;
             }
             tam[i] = tt;
-            temp = tamanoLetra(palabras[i], (tam[i]/2)+5);
+            temp = tamanoLetra(palabras[i], 50);
+          if (total[i]> 1){
+                      temp = tamanoLetra(palabras[i], 50);
+
+          }
             ancho[i] = temp;
             
             if((tx+temp)>h){

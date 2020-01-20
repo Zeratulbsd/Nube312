@@ -33,12 +33,13 @@ Color randomColor = new Color(r, g, b);
         y = yi;
         tam = t;
         an = a;
+        
     }
     public void paint(Graphics2D g){
         Graphics p = palabra.getGraphics();
         
         for(int i=0; i<words.length; i++){
-            Font f = new Font(Font.SERIF, Font.PLAIN, tam[i]);
+            Font f = new Font(Font.SERIF, Font.BOLD,tam[i]);
             //aqui en esta parte cambias el color de letra########################
             //g.setColor(Color.red);
             g.setColor(randomColor);
