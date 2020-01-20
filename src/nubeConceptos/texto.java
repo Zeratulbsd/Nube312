@@ -48,7 +48,7 @@ Color randomColor = new Color(r, g, b);
             
             g.setColor(color());
             g.setFont(f);
-            if(words[i].equals("de") ){
+            if(words[i].equals("de") &&words[i].equals("de") ){
             }else{
              g.drawString(words[i], x[i], y[i]);
             }
