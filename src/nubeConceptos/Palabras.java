@@ -226,9 +226,9 @@ for(int a=0;a<total.length;a++){
                 if(partir[i].length()!= 0){
                     for(int j=0; j<conector.length; j++){
                         if(conector[j].equals(partir[i])){
-                            j=conector.length;
-                            f=1;
-                        }else{
+                         //   j=conector.length;
+                        f=1;
+                     //   }else{
                             f=0;
                         }
                     }
@@ -328,12 +328,12 @@ for(int a=0;a<total.length;a++){
                 tt -= 7;
             }
             tam[i] = tt;
-            temp = tamanoLetra(palabras[i], 50);
+            temp = tamanoLetra(palabras[i], 20);
           if (total[i]> 1){
-                      temp = tamanoLetra(palabras[i], 50);
+                      temp = tamanoLetra(palabras[i], 20);
 
           }
-            ancho[i] = temp;
+            ancho[i] = 100;
             
             if((tx+temp)>h){
                 ty += yi;

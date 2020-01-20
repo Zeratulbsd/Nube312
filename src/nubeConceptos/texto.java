@@ -13,12 +13,7 @@ import java.awt.Graphics2D;
 
 
 public class texto {
-    Random rand = new Random();
-float r = rand.nextFloat();
-float g = rand.nextFloat();
-float b = rand.nextFloat();
-Color randomColor = new Color(r, g, b);
-
+    
     Palabras palabra;
     String words[];
     int x[], y[], tam[], an[];
@@ -35,17 +30,29 @@ Color randomColor = new Color(r, g, b);
         an = a;
         
     }
-    public void paint(Graphics2D g){
+    public Color color(){
+      Random rand = new Random();
+float r = rand.nextFloat();
+float g = rand.nextFloat();
+float b = rand.nextFloat();
+Color randomColor = new Color(r, g, b);
+    
+    return randomColor;
+    }
+            public void paint(Graphics2D g){
         Graphics p = palabra.getGraphics();
-        
+      
+
         for(int i=0; i<words.length; i++){
             Font f = new Font(Font.SERIF, Font.BOLD,tam[i]);
-            //aqui en esta parte cambias el color de letra########################
-            //g.setColor(Color.red);
-            g.setColor(randomColor);
+            
+            g.setColor(color());
             g.setFont(f);
-            g.drawString(words[i], x[i], y[i]);
-            //g.drawRect(x[i], y[i]-tam[i]+(tam[i]/4), an[i]-(tam[i]/8), tam[i]);
+            if(words[i].equals("de") ){
+            }else{
+             g.drawString(words[i], x[i], y[i]);
+            }
+        }            //g.drawRect(x[i], y[i]-tam[i]+(tam[i]/4), an[i]-(tam[i]/8), tam[i]);
         }
     }
-}
+
